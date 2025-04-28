@@ -19,7 +19,7 @@ Labels = pd.read_csv('data_labels-reduced_labels-reduced.csv')
 scale = StandardScaler()
 X = scale.fit_transform(GraphValues)
 
-nval = 15
+nval = 30
 knn = NearestNeighbors(n_neighbors=nval, metric='euclidean').fit(X)
 distances, indices = knn.kneighbors(X)
 st.header("Let's Recommend:", divider="rainbow")
